@@ -33,6 +33,12 @@ class RegistrarViewController : CustomUIViewController {
         obtenerUsuarios()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //Configuracion del color
+        self.navigationController?.navigationBar.barTintColor = .systemBackground
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }

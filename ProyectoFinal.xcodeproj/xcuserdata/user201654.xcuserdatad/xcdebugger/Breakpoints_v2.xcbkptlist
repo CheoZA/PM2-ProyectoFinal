@@ -3,4 +3,54 @@
    uuid = "DFD664D4-C2F8-494E-96C6-222255C0A255"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A757D991-FF14-432C-A541-AC43A3F4E980"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProyectoFinal/Libros/AgregarLibroViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "existe()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A757D991-FF14-432C-A541-AC43A3F4E980 - a2f2b3681b1d9add"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProyectoFinal.AgregarLibrosViewController.existe() -&gt; Swift.Bool"
+                  moduleName = "ProyectoFinal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user201654/Desktop/ProyectoFinal/ProyectoFinal/Libros/AgregarLibroViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "A757D991-FF14-432C-A541-AC43A3F4E980 - 4fe38aa7e614ab5d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (ProyectoFinal.Libro) -&gt; Swift.Bool in ProyectoFinal.AgregarLibrosViewController.existe() -&gt; Swift.Bool"
+                  moduleName = "ProyectoFinal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user201654/Desktop/ProyectoFinal/ProyectoFinal/Libros/AgregarLibroViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "147"
+                  endingLineNumber = "147"
+                  offsetFromSymbolStart = "87">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

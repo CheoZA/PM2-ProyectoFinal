@@ -24,6 +24,8 @@ class IniciarSesionViewController: UIViewController {
         txtUsuario.layer.cornerRadius = 22
         txtContrasena.layer.cornerRadius = 22
         btnIniciarSesion.layer.cornerRadius = 22
+        
+        self.navigationController?.navigationBar.barTintColor = .systemBackground
 
     }
 

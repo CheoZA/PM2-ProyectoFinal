@@ -23,6 +23,8 @@ class AgregarLibrosViewController : UIViewController {
     
     fileprivate let servicio = Service<Libro>()
     
+    var libros = [Libro]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         txtISBN.layer.cornerRadius = 22
@@ -34,6 +36,10 @@ class AgregarLibrosViewController : UIViewController {
         txtEditorial.layer.cornerRadius = 22
         btnAgregarLibro.layer.cornerRadius = 22
         crearDatePicker()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        obtenerLibros()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -73,6 +79,8 @@ class AgregarLibrosViewController : UIViewController {
             mostrarAlerta(mensaje: "No se pueden dejar campos vacios", title: "Error")
             AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
             print("Brrrrr")
+        } else if (existe()) {
+            mostrarAlerta(mensaje: "ISBN en uso. Prueba usar otro", title: "Error")
         } else {
             agregarLibro()
         }
@@ -117,6 +125,30 @@ class AgregarLibrosViewController : UIViewController {
         alerta.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
 
         self.present(alerta, animated: true, completion: nil)
+    }
+    
+    fileprivate func obtenerLibros() {
+        let url = "http://pm2-biblio.atwebpages.com/api/libros.php"
+
+        servicio.obtener(url: url) { (resultado) in
+            switch resultado {
+            case .failure(_) :
+                print("Error al obtener el libro")
+            case .success(let libros) :
+                if(!libros.isEmpty) {
+                    self.libros = libros
+                }
+            }
+        }
+    }
+    
+    func existe() -> Bool {
+        return libros.contains(where: { (libro) in
+            if libro.ISBN.uppercased() == self.txtISBN.text?.uppercased() {
+                return true
+            }
+            return false
+        })
     }
     
 }
